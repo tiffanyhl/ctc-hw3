@@ -3,46 +3,81 @@ Homework 3 - Code the Change
 
 Question #1:
 ============
+CREATE TABLE Students
+(
+    id int,
+    name varchar(255),
+    birth varchar(255),
+    gpa float,
+    grad int
+    PRIMARY KEY (id)
+);
 
 
 
 Question #2:
 ============
-
+INSERT INTO Students (name, birth, gpa, grad)
+VALUES (Anderson, 1987­10­22, 3.9, 2014);
+INSERT INTO Students (name birth, gpa, grad)
+VALUES (Jones, 1990­4­16, 2.4, 2016);
+INSERT INTO Students (name birth, gpa, grad)
+VALUES (Hernandez, 1989­8­12, 3.1, 2015);
+INSERT INTO Students (name birth, gpa, grad)
+VALUES (Chen, 1990­2­4, 3.2, 2015);
 
 
 Question #3:
 ============
-
+DELETE FROM Students
+WHERE name = Anderson;
 
 
 Question #4:
 ============
+CREATE VIEW [Table Contents] AS
+SELECT name, birth, gpa, grad
+FROM Students
 
-
+SELECT * FROM [Table Contents]
 
 Question #5:
 ============
+CREATE VIEW [Names and GPAs] AS
+SELECT name, gpa
+FROM Students
 
+SELECT * FROM [Names and GPAs]
 
 
 Question #6:
 ============
-
+SELECT * FROM [Names and GPAs]
+WHERE gpa > 3.0
 
 
 Question #7:
 ============
+# CREATE VIEW [Honor Roll] AS
+# SELECT name, gpa
+# FROM Students
+# WHERE gpa > 3.0
 
+SELECT name, gpa
+FROM Students
+WHERE gpa > 3.0
+ORDER BY gpa ASC
 
 
 Question #8:
 ============
-
+UPDATE Students
+SET gpa = 2.6
+WHERE gpa = 2.4
 
 
 Question #9:
 ============
-
+DELETE * FROM Students
 
 
